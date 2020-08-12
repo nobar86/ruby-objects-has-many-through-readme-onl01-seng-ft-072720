@@ -48,4 +48,3 @@ class Customer
     oldest_customer
   end
 
-end
