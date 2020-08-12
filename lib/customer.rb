@@ -12,22 +12,20 @@ class Customer
   def self.all
     @@all
   end
-  
-   def new_meal(waiter, total, tip=0)
-    Meal.new(waiter, self, total, tip)
-  end
-  
+ 
   def meals
-  Meal.all.select do |meal|
-    meal.customer == self
+    Meal.all.select do |meal|
+      meal.customer == self
+    end
   end
-  
+ 
   def waiters
-  meals.map do |meal|
-    meal.waiter
+    meals.map do |meal|
+      meal.waiter
+    end
   end
-  
-   def new_meal(waiter, total, tip=0)
+ 
+  def new_meal(waiter, total, tip=0)
     Meal.new(waiter, self, total, tip)
   end
  
@@ -47,4 +45,5 @@ class Customer
     end
     oldest_customer
   end
+ 
 end
