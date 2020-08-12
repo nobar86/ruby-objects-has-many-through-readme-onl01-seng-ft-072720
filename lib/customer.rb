@@ -47,5 +47,5 @@ class Customer
     end
     oldest_customer
   end
-end
+
 end
